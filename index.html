@@ -33,11 +33,12 @@
                 <p><span class="fw-bolder">Try it free 7 days</span> then $20/mo. thereafter</p>
               </header>
 
-              <form id="myForm" name="signupForm" class="needs-validation">
+              <!-- <form id="myForm" name="signupForm" class="needs-validation" novalidate> -->
+              <form id="myForm" name="signupForm">
               <div class="container form py-3 pt-5" style="background: #fff">
 
-                <div class="form-group">
-                  <input type="text" name="first-name" id="validationFname" class="form-control" placeholder="First Name">
+                <div class="form-group error">
+                  <input type="text" name="first-name" id="first-name validationFname" class="form-control" placeholder="First Name">
                   <i class="fas fa-check-circle success-icon"></i>
                   <img class="error-icon" src="./images/icon-error.svg" alt="">
                   <small class="error-msg fname-error">First Name cannot be empty</small>
@@ -58,8 +59,8 @@
                   <div class=" error-msg password-error">Password cannot be empty</div>
                 </div>
                 <div class="form-group">
-                  <input type="submit" id="submit" class="form-control" value="CLAIM YOUR FREE TRIAL">
-                  <p class="confirm">By clicking the button, you are agreeing to our <a href="#" class="ts">Terms and Services</a></p>
+                  <button type="submit" id="submit" class="form-control">CLAIM YOUR FREE TRIAL</button>
+                  <p class="term">By clicking the button, you are agreeing to our <a href="#" class="ts">Terms and Services</a></p>
                 </div>
               </div>
               </form>
@@ -67,6 +68,19 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="container">
+      <footer class="footer mb-5" style="background: #fff;">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="attribution">
+              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+              Coded by <a href="https://github.com/cryptotosh" target="_blank">ToshIT.</a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src=

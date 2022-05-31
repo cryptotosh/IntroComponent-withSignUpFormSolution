@@ -25,7 +25,7 @@
 }
 
 body{
-  background: url(../images/bg-intro-desktop.png), hsl(0, 100%, 74%) ;
+  background: url(../images/bg-intro-desktop.png), hsl(0, 100%, 74%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -34,15 +34,13 @@ body{
 .wrapper{
   width: 100%;
   height: 100%;
-  border: 5px solid aqua;
   margin: 15rem auto;
   padding: 4rem 0;
-}
-.wrapper .container{
-  /* margin-top: 10rem; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-/* Intro col */
+/* Left column */
 .intro div h2{
   font-weight: 700;
   font-size: 2.3rem;
@@ -56,13 +54,20 @@ body{
 }
 
 /* form style */
-header p{
+header{
+  transition: transform 0.2s ease;
+  transition: all 0.2s ease-out;
   padding: 1.5rem 5rem;
   margin-bottom: 1.3rem;
   background: var(--blue);
   text-align: center;
   border-radius: 10px;
   box-shadow: 0px 5px 0px hsl(0, 0%, 0%, 0.15);
+  cursor: pointer;
+}
+header:hover{
+  background-color: hsl(248, 99%, 28%);
+  transition: all 0.2s ease-in;
 }
 .form{
   border-radius: 10px;
@@ -80,6 +85,7 @@ header p{
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   letter-spacing: 0.25px;
+  /* outline: none; */
 }
 .form-group .form-control:focus, .form-group .form-control:active{
   outline: none;
@@ -98,8 +104,10 @@ header p{
 }
 .form-group #submit:hover{
   background: #77E2B3;
+  transition: all 0.2s ease-in;
+
 }
-.confirm{
+.term{
   color: var(--grey);
   font-size: 11px;
   text-align: center;
@@ -135,12 +143,12 @@ header p{
   /* border-color: hsl(249, 10%, 26%); */
   border: 3px solid green;
 }
-.error .form-control{
-  border: 3px solid var(--red);
-}
 .success i.success-icon{
   visibility: visible;
   color: green;
+}
+.error .form-control{
+  border: 3px solid var(--red);
 }
 .error img.error-icon{
   visibility: visible;
@@ -158,7 +166,22 @@ header p{
 .form-group.error .error-msg{
   visibility: visible;
 } */
-
+/* Footer styles */
+footer{
+  padding: 1rem;
+  border-radius: 5px;
+}
+footer .attribution {
+  font-size: 0.7rem;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+.footer .attribution a{
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
 
 
 @media (max-width: 768px){
