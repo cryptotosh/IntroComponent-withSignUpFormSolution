@@ -54,10 +54,11 @@ body{
 }
 
 /* form style */
-header{
+header p{
   transition: transform 0.2s ease;
   transition: all 0.2s ease-out;
   padding: 1.5rem 5rem;
+  /* padding: 0; */
   margin-bottom: 1.3rem;
   background: var(--blue);
   text-align: center;
@@ -111,6 +112,7 @@ header:hover{
   color: var(--grey);
   font-size: 11px;
   text-align: center;
+  padding: 0 2rem;
 }
 .ts{
   color: var(--red);
