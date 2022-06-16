@@ -1,207 +1,245 @@
 /* |Font imported */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Global reset */
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 /* Global variables */
+
 :root {
-  /* colors */
-  --red: hsl(0, 100%, 74%);
-  --green: hsl(154, 59%, 51%);
-  --blue: hsl(248, 32%, 49%);
-  --dark-purple: hsl(249, 10%, 26%);
-  --grey: hsl(246, 25%, 77%);
-  /* shadows */
-  --form-shadow: 0px 8px 0px 0px hsla(0, 0%, 0%, 0.15);
-  --btn-shadow: 0px -4px 0px 0px hsla(0, 0%, 0%, 0.09) inset;
+    /* colors */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-purple: hsl(249, 10%, 26%);
+    --grey: hsl(246, 25%, 77%);
+    /* shadows */
+    --form-shadow: 0px 8px 0px 0px hsla(0, 0%, 0%, 0.15);
+    --btn-shadow: 0px -4px 0px 0px hsla(0, 0%, 0%, 0.09) inset;
 }
 
-body{
-  background: url(../images/bg-intro-desktop.png), hsl(0, 100%, 74%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+body {
+    background: url(../images/bg-intro-desktop.png), hsl(0, 100%, 74%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    
 }
 
-.wrapper{
-  width: 100%;
-  height: 100%;
-  margin: 15rem auto;
-  padding: 4rem 0;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 15rem auto;
+    padding: 4rem 0;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
+
 
 /* Left column */
-.intro div h2{
-  font-weight: 700;
-  font-size: 2.3rem;
-  padding-right: 4rem;
-  padding-bottom: 1.5rem;
+
+.intro div h2 {
+    font-weight: 700;
+    font-size: 2.3rem;
+    padding-right: 4rem;
+    padding-bottom: 1.5rem;
 }
-.intro div p{
-  padding-right: 0.5rem;
-  color: hsl(240, 24%, 94%);
-  padding-bottom: 2rem;
+
+.intro div p {
+    padding-right: 0.5rem;
+    color: hsl(240, 24%, 94%);
+    padding-bottom: 2rem;
 }
+
 
 /* form style */
-header p{
-  transition: transform 0.2s ease;
-  transition: all 0.2s ease-out;
-  padding: 1.5rem 5rem;
-  /* padding: 0; */
-  margin-bottom: 1.3rem;
-  background: var(--blue);
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0px 5px 0px hsl(0, 0%, 0%, 0.15);
-  cursor: pointer;
-}
-header:hover{
-  background-color: hsl(248, 99%, 28%);
-  transition: all 0.2s ease-in;
-}
-.form{
-  border-radius: 10px;
-  box-shadow: var(--form-shadow);
-}
-.form-group{
-  margin-bottom: 2rem;
-  position: relative;
+
+header p {
+    transition: transform 0.2s ease;
+    transition: all 0.2s ease-out;
+    padding: 1.5rem 5rem;
+    /* padding: 0; */
+    margin-bottom: 1.3rem;
+    background: var(--blue);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px hsl(0, 0%, 0%, 0.15);
+    cursor: pointer;
 }
 
-.form-group .form-control{
-  padding: 1rem 1.5rem;
-  border: 1px solid hsl(246, 25%, 77%);
-  border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.25px;
-  /* outline: none; */
+header p:hover {
+    background-color: hsl(248, 99%, 28%);
+    transition: all 0.2s ease-in;
 }
-.form-group .form-control:focus, .form-group .form-control:active{
-  outline: none;
-  background: transparent;
-  border: 1px solid hsl(249, 10%, 26%);
+
+.form {
+    border-radius: 10px;
+    box-shadow: var(--form-shadow);
 }
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-group .form-control {
+    padding: 1rem 1.5rem;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    /* outline: none; */
+}
+
+.form-group .form-control:focus,
+.form-group .form-control:active {
+    outline: none;
+    background: transparent;
+    border: 1px solid hsl(249, 10%, 26%);
+}
+
 
 /* Button styles */
-.form-group #submit{
-  background: var(--green);
-  color: #fff;
-  box-shadow: var(--btn-shadow);
-  text-align: center;
-  margin-bottom: 1rem;
-  border: none;
-}
-.form-group #submit:hover{
-  background: #77E2B3;
-  transition: all 0.2s ease-in;
 
+.form-group #submit {
+    background: var(--green);
+    color: #fff;
+    box-shadow: var(--btn-shadow);
+    text-align: center;
+    margin-bottom: 1rem;
+    border: none;
 }
-.term{
-  color: var(--grey);
-  font-size: 11px;
-  text-align: center;
-  padding: 0 2rem;
+
+.form-group #submit:hover {
+    background: #77E2B3;
+    transition: all 0.2s ease-in;
 }
-.ts{
-  color: var(--red);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 12px;
+
+.term {
+    color: var(--grey);
+    font-size: 11px;
+    text-align: center;
+    padding: 0 2rem;
 }
-.ts:hover{
-  color: hsl(0, 82%, 60%);
+
+.ts {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
 }
+
+.ts:hover {
+    color: hsl(0, 82%, 60%);
+}
+
 
 /* Error state */
-.form-group .error-icon, .form-group .success-icon{
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  visibility: hidden;
-}
-.form-group .error-msg{
-  position: absolute;
-  right: 0;
-  color: var(--red);
-  font-size: 12px;
-  font-style: italic;
-  font-weight: 500;
-  visibility: hidden;
+.form-group .errorImg{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    visibility: hidden;
 }
 
-.success .form-control{
-  /* border-color: hsl(249, 10%, 26%); */
-  border: 3px solid green;
+.form-group .error {
+    position: absolute;
+    right: 0;
+    color: var(--red);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    visibility: hidden;
 }
-.success i.success-icon{
-  visibility: visible;
-  color: green;
+
+.form-group.success input {
+    border: 3px solid green;
 }
-.error .form-control{
-  border: 3px solid var(--red);
+
+.form-group.error input {
+    border: 3px solid var(--red);
 }
-.error img.error-icon{
-  visibility: visible;
+
+.error img.errorImg {
+    visibility: visible;
 }
-.error .error-msg{
-  visibility: visible;
+
+.error .error {
+    visibility: visible;
 }
+
 
 /* .form-group.error input{
   border-color: var(--red);
 }
-.form-group.error .error-icon{
+.form-group.error .errorImg{
   visibility: visible;
 }
 .form-group.error .error-msg{
   visibility: visible;
 } */
+
+
 /* Footer styles */
-footer{
-  padding: 1rem;
-  border-radius: 5px;
+footer {
+    padding: 1rem;
+    border-radius: 5px;
 }
+
 footer .attribution {
-  font-size: 0.7rem;
-  color: #000;
-  text-align: center;
-  margin: 0;
-}
-.footer .attribution a{
-  text-decoration: none;
-  font-size: 0.7rem;
-  font-weight: 700;
+    font-size: 0.7rem;
+    color: #000;
+    text-align: center;
+    margin: 0;
 }
 
+.footer .attribution a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
 
-@media (max-width: 768px){
-  body{
-    background: url(../images/bg-intro-mobile.png), hsl(0, 100%, 74%) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
-  .intro div h2{
-    text-align: center;
-    padding-right: 0;
-    font-size: 2rem;
-  }
-  .intro div p{
-    text-align: center;
-    font-size: 16px;
-    padding: 0 1rem 0 1rem;
-    margin-bottom: 3rem;
-  }
+/* Media queries */
+@media (max-width: 992px){
+    .wrapper {
+        margin: 1rem auto;
+        padding: 4rem 0;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background: url(../images/bg-intro-mobile.png), hsl(0, 100%, 74%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .wrapper {
+        margin: 1rem auto;
+        padding: 4rem 0;
+    }
+    .intro div h2 {
+        text-align: center;
+        padding-right: 0;
+        font-size: 2rem;
+    }
+    .intro div p {
+        text-align: center;
+        font-size: 16px;
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 3rem;
+    }
+    .footer{
+        margin-top: 3rem;
+    }
 }

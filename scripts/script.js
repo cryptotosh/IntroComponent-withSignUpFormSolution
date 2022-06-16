@@ -1,96 +1,72 @@
-const myForm = document.getElementById('myForm');
-const fname = document.querySelector('#validationFname');
-const lname = document.querySelector('#last-name');
-const email = document.querySelector('#email');
-const password = document.querySelector('#password');
+const myForm = document.querySelector(".form");
+const fname = document.getElementById("firstName");
+const lname = document.getElementById("lastName");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
-myForm.addEventListener('submit', (e)=>{
+myForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  validateForm();
+  validatedInput();
 });
 
-function validateForm(){
+function setError(element, message) {
+  const input = element.parentElement;
+  const error = input.querySelector(".form-group > .error");
+  error.textContent = message;
+  // error.style.visibility="visible";
 
-  /*
+  input.classList.add("error");
+  input.classList.remove("success");
+}
+
+function setSuccess(element, message) {
+  const input = element.parentElement;
+  const error = input.querySelector(".form-group > .error");
+  error.textContent = " ";
+  input.classList.add("success");
+  input.classList.remove("error");
+}
+
+const validEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
+function validatedInput() {
   // get the value from the inputs
   const fnameValue = fname.value.trim();
   const lnameValue = lname.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
-  */
 
-  if (fname.ariaValueMax.trim() ===''){
-    // show error
+  if (fnameValue === "") {
+    setError(fname, "First name is required");
+  } else {
+    setSuccess(fname);
+  }
 
-    // add error message
-    setError(fname, 'First Name cannot be empty');
+  if (lnameValue === "") {
+    setError(lname, "Last name is required");
+  } else {
+    setSuccess(lname);
+  }
 
+  if (emailValue === "") {
+    setError(email, "Email is required");
+  } else if (!validEmail(emailValue)) {
+    setError(email, "Seems that's not a valid email");
+  } else {
+    setSuccess(email);
+  }
+
+  if (passwordValue === "") {
+    setError(password, "Password is required");
+  } else if (passwordValue.length < 5) {
+    setError(password, "Password must be at least 5 characters long");
   } 
+  else {
+    setSuccess(password);
+  }
 }
-function setError(input, errorMessage) {
-  const formGroup = input.parentElement; // .form-group
-  formGroup.classList.add('error');
-}
-
-
-/*if (fnameValue===''){
-  // show error
-
-  // add error message
-  setError(fname, 'First Name cannot be empty');
-} else{
-  // add success message
-  setSuccessFor(fname);
-}
-}
-function setError(input, message) {
-const formGroup = input.parentElement; // .form-group
-formGroup.classlist.add('error');
-// const errorMsg = formGroup.querySelector('.error-msg');
-
-// add error message inside errorMsg
-errorMsg.innerText = message;
-
-// add error class
-// formGroup.className = 'form-group error';*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Regex for email format validation
-// const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
-
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-
-/*(function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()*/
